@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>JX Clinic</title>
+    <style>
+        .container {
+            padding-top: 50px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px;
+            background: url('https://images.unsplash.com/photo-1550592704-6c76defa9985?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+            background-size: cover;
+            color: rgb(255, 255, 255);
+        }
+
+        .header h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .feedback-container {
+            margin-top: 50px;
+        }
+
+        .feedback-form {
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+
+        .feedback-text {
+            margin-bottom: 580px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <%- include ('partials/navbar.ejs') %>
+
+    <div class="header">
+        <h1>We Value Your Feedback</h1>
+        <p>Your feedback helps us improve our services</p>
+    </div>
+
+    <div class="container feedback-container">
+        <div class="row">
+            <div class="col-md-6 feedback-text">
+                <h2>Get In Touch</h2><br>
+                <p>Have an enquiry? Or a suggestion or feedback you would like to share?</p>
+                <p>Need corporate medical services, health screenings, or even health screening talks? Or keen to explore future business opportunities with JX Clinic?</p>
+                <p>We definitely look forward to hearing from you. Alternatively, you may also email us directly at enquiries@jxclinic.com.sg</a>.</p>
+            </div>
+
+            <div class="col-md-6">
+                <div class="feedback-form">
+                    <h3>Contact Us</h3>
+                    <form id="form" action="/feedback" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name*</label>
+                            <input type="text" class="form-control" id="name" name="name"required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email*</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactNumber" class="form-label">Contact Number*</label>
+                            <input type="text" class="form-control" id="contactNumber" name="contact_number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clinicVisited" class="form-label">Clinic Visited* (select N/A if none)</label>
+                            <select class="form-select" id="clinicVisited"  name="clinic_visited" required>
+                                <option selected>Select a Clinic</option>
+                                <option value="Clinic 1">JX Clinic</option>
+                                <option value="Clinic 2">HealthPlus Clinic</option>
+                                <option value="N/A">N/A</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Date of Visit*</label>
+                            <input type="date" class="form-control" id="date" name="date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject*</label>
+                            <input type="text" class="form-control" id="subject" name="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comments" class="form-label">Comments</label>
+                            <textarea class="form-control" id="comments" name="comment" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Submit form-->
+  <% if (success) { %>
+        <script>
+            alert("Successfully submitted!");
+        </script>
+    <% } %>
+
+    <%- include ('partials/footer.ejs') %>
+</body>
+
+</html>

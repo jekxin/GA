@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>JX Clinic</title>
+    <style>
+        .top-text {
+            text-align: center;
+            padding-bottom: 20px;
+            padding-top: 30px;
+        }
+
+        .rounded-image {
+            width: 100%;
+            height: auto;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .container {
+            padding-top: 50px;
+        }
+
+        .image-column {
+            padding-left: 100px;
+            padding-bottom: 10px;
+            width: 500px;
+        }
+
+        .text-column {
+            padding-left: 40px;
+            padding-top: 10px;
+        }
+
+        .banner {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            padding-bottom: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .card-img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .card {
+            border: none;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include ('partials/navbar.ejs') %>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 image-column">
+                    <img class="rounded-image"
+                        src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Clinic">
+                </div>
+                <div class="col-md-7 text-column">
+                    <h1 class="top-text"><b>Welcome to JX Clinic </b></h1><br>
+                    <p>Founded in 1998 by an Australian visionary, our clinic has proudly served the healthcare needs of 
+                        Singapore for over 25 years. Initially specializing in travel health and vaccinations, we identified 
+                        a critical gap in healthcare services for expatriates.
+                    </p>
+                    <p>In 1999, we established our first clinic at Tanglin Shopping Centre. Building on the success of our 
+                        Orchard location, we soon opened a second clinic near Holland Village, known as Jelita.
+                    </p>
+                    <p>Driven by Singapore's vibrant expatriate community and its status as a regional business hub, our 
+                        clinics flourished. Our international doctors, trained to address the challenges of relocation, 
+                        provided a reassuring healthcare experience akin to home for many families.
+                    </p>
+                    <p>This "home away from home" approach solidified our reputation as a trusted healthcare provider among
+                        expatriates. Over the years, we expanded our services to encompass comprehensive healthcare solutions,
+                        including vaccinations and various health screenings.
+                    </p>
+                    <p>Today, JX Clinic continues to prioritize preventive healthcare and personalized service, ensuring 
+                        the well-being of our diverse community.</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <img class="banner"
+                src="https://plus.unsplash.com/premium_photo-1682094069738-19a65f3145b9?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Family Photo">
+        </div>
+
+        <div class="text-center">
+            <h1><b>Your Health Journey Starts Here</b></h1>
+        </div>
+
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img"
+                            src="https://www.gutcare.com.sg/wp-content/uploads/2022/04/Frame-22-min.jpg "
+                            alt="Doctor image 1">
+                        <div class="card-body">
+                            <h4 class="card-title">Dr Leong Keng Hong</h4>
+                            <p class="card-text">Senior Consultant and Medical Director</p><br>
+                            <p>Dr. Leong Keng Hong specializes in comprehensive health screenings, providing thorough
+                                evaluations for overall well-being and early detection of various conditions. His
+                                expertise ensures patients receive accurate and detailed assessments.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1">Read
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img"
+                            src="https://www.gutcare.com.sg/wp-content/uploads/2022/05/Frame-26-min.jpg"
+                            alt="Doctor image 2">
+                        <div class="card-body">
+                            <h4 class="card-title">Dr Jason Lee</h4>
+                            <p class="card-text">Senior Consultant and Medical Director</p><br>
+                            <p>Dr. Jason Lee excels in conducting specialized health screenings, focusing on identifying
+                                and managing specific health issues. His approach combines general health assessments with
+                                targeted screenings to address individual health concerns effectively.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2">Read
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img"
+                            src="https://www.gutcare.com.sg/wp-content/uploads/2022/11/CWH-Whtie-Coat-Sitting-min-2.jpg "
+                            alt="Doctor image 3">
+                        <div class="card-body">
+                            <h4 class="card-title">Dr Bobby Tan</h4>
+                            <p class="card-text">Senior Consultant and Medical Director.</p><br>
+                            <p>Dr. Bobby Tan is a General Practitioner with a keen interest in preventive health. He
+                                offer affordable health screening services, helping patients stay informed about their health
+                                status and take proactive measures for maintaining good health.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal3">Read
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="myModal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">More Information</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Dr Leong Keng Hong is a Senior Consultant at our clinic, specializing in comprehensive health
+                            screenings. He provides thorough evaluations for overall well-being and early detection of
+                            various conditions, ensuring patients receive accurate and detailed assessments.</p><br>
+                        <p>Fellowship-trained at Johns Hopkins in the USA, Dr Leong has extensive experience in
+                            preventive health. He has held significant roles in major healthcare institutions, where he 
+                            contributed to advancing health screening programs. His expertise and dedication to patient care
+                            have earned him recognition and numerous awards.</p><br>
+                        <p>Dr Leong is passionate about promoting preventive health within the community. He believes in
+                            the importance of early detection and regularly collaborates with primary care providers to
+                            ensurepatients receive timely and effective care.</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="myModal2">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">More Information</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Dr. Jason Lee is the Medical Director at our clinic, excelling in conducting specialized
+                            health screenings. His expertise in managing and directing health screening programs ensures the
+                            highest standards of care for patients.</p><br>
+                        <p>Dr. Lee completed his advanced training in the USA and has held leadership positions in
+                            renowned healthcare centers. His contributions to health screening and preventive medicine have
+                            been widely acknowledged, earning him several prestigious awards.</p><br>
+                        <p>With a strong focus on preventive health, Dr. Lee is dedicated to helping patients identify
+                            and manage specific health issues early. He believes in a comprehensive approach to health
+                            assessments, combining general health evaluations with targeted screenings to address
+                            individual health concerns effectively.</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal" id="myModal3">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">More Information</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Dr. Bobby Tan is a General Practitioner with a special interest in preventive health. He
+                            offers affordable health screening services, helping patients stay informed about their health
+                            status and take proactive measures for maintaining good health.</p><br>
+                        <p>Dr. Tan has undergone extensive training in preventive medicine and has a wealth of experience 
+                            in providing primary care. His commitment to making healthcare accessible and affordable has
+                            made him a trusted provider in the community.</p><br>
+                        <p>Dr. Tan's approach to health screenings focuses on early detection and prevention. He works
+                            closely with patients to develop personalized health plans, ensuring they receive the
+                            necessary support and guidance to maintain optimal health.</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%- include ('partials/footer.ejs') %>
+</body>
+
+</html>
